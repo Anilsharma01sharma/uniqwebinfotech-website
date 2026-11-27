@@ -103,3 +103,7 @@ details p{margin-top:12px;color:var(--muted)}
 .copy a{color:#D6D3D1;text-decoration:underline}
 .client h3 a{color:var(--teal)}.client h3 a:hover{text-decoration:underline}
 .client .metric{font-family:'Outfit',sans-serif;font-size:30px;color:var(--ink);line-height:1.1}
+.client-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.client-top .chip{align-self:flex-start}
+.spark{display:block;flex-shrink:0}
+.result .spark{margin-bottom:6px}
