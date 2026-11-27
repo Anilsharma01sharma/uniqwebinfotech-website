@@ -109,3 +109,4 @@ details p{margin-top:12px;color:var(--muted)}
 .result .spark{margin-bottom:6px}
 .js .clients-grid > .client:nth-child(n+7){display:none}
 .js .clients-grid.open > .client{display:flex}
+.tools .more-chip{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700}
