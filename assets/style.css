@@ -180,3 +180,16 @@ h1,h2{color:var(--ink)}
 .hero-video .form{box-shadow:0 24px 60px rgba(0,0,0,.28);border-color:transparent}
 @media (prefers-reduced-motion:reduce){.hero-video .hero-bg{display:none}.hero-video{background:#25302F url(https://assets.mixkit.co/videos/4396/4396-thumb-720-0.jpg) center/cover}}
 @media (max-width:760px){.hero-video{padding:48px 0 64px}.hero-video .hero-veil{background:rgba(26,34,36,.78)}}
+/* Scroll-in animations */
+.visual .bar i{width:var(--w)}
+.js .visual .bar i{width:0;transition:width 1.6s cubic-bezier(.22,.61,.36,1)}
+.js .visual.in .bar i{width:var(--w)}
+.js .visual.in .bar:nth-of-type(1) i{transition-delay:.05s}
+.js .spark polyline{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 1.6s ease-out}
+.js .spark circle{opacity:0;transition:opacity .4s ease 1.4s}
+.js .spark path{opacity:0;transition:opacity 1s ease .4s}
+.js .spark rect{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);transition:transform .9s cubic-bezier(.22,.61,.36,1)}
+.js .in .spark polyline,.js .spark.in polyline{stroke-dashoffset:0}
+.js .in .spark circle,.js .in .spark path,.js .spark.in circle,.js .spark.in path{opacity:1}
+.js .in .spark rect,.js .spark.in rect{transform:scaleY(1)}
+@media (prefers-reduced-motion:reduce){.js .visual .bar i{width:var(--w);transition:none}.js .spark *{transition:none!important;opacity:1!important;stroke-dashoffset:0!important;transform:none!important}}
