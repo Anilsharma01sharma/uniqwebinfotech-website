@@ -87,3 +87,4 @@ details p{margin-top:12px;color:var(--muted)}
 .visual .bar i{display:block;height:100%;background:var(--saffron);border-radius:999px}
 .white .card{background:var(--sand)}
 @media(max-width:620px){.wa span{display:none}.wa{padding:14px}}
+.brand{display:inline-flex;align-items:center;gap:10px}
