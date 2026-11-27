@@ -110,3 +110,4 @@ details p{margin-top:12px;color:var(--muted)}
 .js .clients-grid > .client:nth-child(n+7){display:none}
 .js .clients-grid.open > .client{display:flex}
 .tools .more-chip{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700}
+.form-error{background:#FEF2F2;color:#991B1B;border-radius:10px;padding:10px 12px;font-size:14px;margin:4px 0}
