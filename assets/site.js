@@ -26,3 +26,14 @@
     b.textContent = open ? 'Show fewer' : 'View more results';
   });
 })();
+(function () {
+  var t = document.getElementById('chat-toggle'), w = document.getElementById('chat-widget'), o = document.getElementById('chat-options');
+  if (!t || !w || !o) return;
+  t.addEventListener('click', function () {
+    var open = !w.classList.contains('open');
+    w.classList.toggle('open', open); o.hidden = !open;
+    t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    t.setAttribute('aria-label', open ? 'Hide chat options' : 'Open chat options');
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && w.classList.contains('open')) t.click(); });
+})();

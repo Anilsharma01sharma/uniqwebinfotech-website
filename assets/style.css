@@ -121,3 +121,24 @@ details p{margin-top:12px;color:var(--muted)}
 .tools span{background:#fff}
 .white .tools span,.white .badge{background:#fff}
 .badge{border:1px solid var(--sand-d)}
+/* Floating chat widget (same pattern as zorvextechnologies.com) */
+.wa{display:none}
+.chat-widget{position:fixed;right:22px;bottom:22px;z-index:100;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.chat-options{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.chat-options[hidden]{display:none}
+.chat-btn,.chat-toggle{position:relative;width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.2);border:0;cursor:pointer;transition:transform .15s}
+.chat-btn:hover,.chat-toggle:hover{transform:scale(1.07)}
+.chat-btn svg,.chat-toggle svg{width:28px;height:28px}
+.chat-wa{background:#25D366}.chat-phone{background:#18181B}.chat-mail{background:#D2432B}
+.chat-toggle{background:#E8553D}
+.chat-toggle .ic-close{display:none}
+.chat-widget.open .chat-toggle .ic-open{display:none}
+.chat-widget.open .chat-toggle .ic-close{display:block}
+.chat-tip{position:absolute;right:66px;white-space:nowrap;background:#fff;color:#18181B;font-size:14px;font-weight:500;padding:6px 12px;border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.15);opacity:0;pointer-events:none;transition:opacity .15s}
+.chat-tip::after{content:"";position:absolute;right:-5px;top:50%;margin-top:-5px;border:5px solid transparent;border-right:0;border-left-color:#fff}
+.chat-btn:hover .chat-tip,.chat-btn:focus-visible .chat-tip,.chat-toggle:hover .chat-tip{opacity:1}
+.chat-widget.open .chat-options .chat-btn{animation:chatPop .2s ease both}
+@keyframes chatPop{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.chat-widget.open .chat-options .chat-btn{animation:none}}
+.chat-tip-toggle{display:none}
+.chat-widget.open .chat-tip-toggle{display:block}
