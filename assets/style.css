@@ -243,3 +243,4 @@ h1,h2{color:var(--ink)}
 .nav-toggle{border:1px solid var(--line)!important}
 @media (max-width:760px){.topbar .wrap{justify-content:center;text-align:center}.tb-loc{display:none}.topbar{font-size:13px}}
 @media (max-width:380px){.tb-sep,.tb-mail{display:none}.brand{font-size:19px;gap:8px}.brand svg{width:32px;height:32px}}
+.founder-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;box-shadow:0 10px 30px rgba(26,26,38,.15)}
