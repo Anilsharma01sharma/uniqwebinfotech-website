@@ -193,3 +193,33 @@ h1,h2{color:var(--ink)}
 .js .in .spark circle,.js .in .spark path,.js .spark.in circle,.js .spark.in path{opacity:1}
 .js .in .spark rect,.js .spark.in rect{transform:scaleY(1)}
 @media (prefers-reduced-motion:reduce){.js .visual .bar i{width:var(--w);transition:none}.js .spark *{transition:none!important;opacity:1!important;stroke-dashoffset:0!important;transform:none!important}}
+/* Mobile: centred layout + two-column footer */
+@media (max-width:760px){
+  .hero .stack,.sec .stack,.sec-sm .stack,.row>.stack{align-items:center;text-align:center}
+  .hero .btns,.btns{justify-content:center}
+  .checks,.proof{justify-content:center}
+  .card{align-items:center;text-align:center}
+  .card .chip,.card .more{align-self:center}
+  .client-top{flex-direction:column;align-items:center;gap:10px}
+  .client-top .chip{align-self:center}
+  .why{flex-direction:column;align-items:center;text-align:center;gap:6px}
+  .visual{text-align:center}
+  .visual .stack{align-items:stretch}
+  .stats{text-align:center}
+  .stat{display:flex;flex-direction:column;align-items:center}
+  .cta{flex-direction:column;text-align:center;justify-content:center}
+  .cta .stack{align-items:center}
+  .cta>*{flex:0 0 auto!important}
+  .cta{gap:20px;padding:36px 24px}
+  .crumbs{text-align:center}
+  .timeline{text-align:left}
+  .row>*{text-align:center}
+  .form{text-align:left}
+  details{text-align:left}
+  .site-footer .wrap{grid-template-columns:1fr 1fr;gap:28px 20px;text-align:center}
+  .site-footer .wrap>:first-child{grid-column:1/-1;align-items:center}
+  .site-footer .wrap>:last-child{grid-column:1/-1}
+  .site-footer .wrap>:last-child ul{display:grid;grid-template-columns:1fr 1fr;gap:8px 20px}
+  .site-footer ul{align-items:center}
+  .site-footer .brand{justify-content:center}
+}
