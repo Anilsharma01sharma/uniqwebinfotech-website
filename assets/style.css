@@ -1,7 +1,7 @@
-:root{--teal:#0F5C5C;--teal-d:#083D3D;--teal-l:#E6F2F2;--sand:#FBF6EE;--sand-d:#E7E0D4;--ink:#1C1917;--muted:#57534E;--body:#44403C;--saffron:#F5B544;--amber:#B45309;--line:#D6D3D1}
+:root{--teal:#0F5C5C;--teal-d:#083D3D;--teal-l:#E7F1F0;--sand:#F5F7F6;--sand-d:#E3E9E7;--ink:#14201E;--muted:#55615F;--body:#3B4745;--saffron:#F5B544;--amber:#B45309;--line:#D5DDDB}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:17px;line-height:1.6}
+body{margin:0;font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:#FFFFFF;font-size:17px;line-height:1.6}
 a{color:var(--teal);text-decoration:none}a:hover{color:var(--teal-d)}
 h1,h2,h3,.brand,.display{font-family:'Outfit',system-ui,sans-serif;color:var(--teal);line-height:1.1;margin:0}
 h1{font-size:clamp(36px,5vw,58px);letter-spacing:-.5px}
@@ -37,13 +37,13 @@ a.card{color:var(--ink);transition:transform .15s,box-shadow .15s}a.card:hover{t
 .topbar{background:var(--teal);color:#E6F2F2;font-size:14px}
 .topbar .wrap{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;padding-top:10px;padding-bottom:10px}
 .topbar a{color:#fff}
-.site-header{position:sticky;top:0;z-index:20;background:rgba(251,246,238,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--sand-d)}
+.site-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--sand-d)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:18px;padding-bottom:18px}
 .brand{font-weight:700;font-size:22px}
 .nav{display:flex;gap:26px;font-weight:500;font-size:15px;align-items:center}
 .nav a{color:var(--body)}.nav a[aria-current=page]{color:var(--teal);font-weight:700}
 .nav-toggle{display:none;background:none;border:2px solid var(--teal);border-radius:10px;padding:8px 12px;color:var(--teal);font-weight:700;font-family:inherit}
-@media(max-width:900px){.nav-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--sand);flex-direction:column;align-items:flex-start;padding:16px 24px 24px;border-bottom:1px solid var(--sand-d)}.nav.open{display:flex}.hdr-cta{display:none}}
+@media(max-width:900px){.nav-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 24px 24px;border-bottom:1px solid var(--sand-d)}.nav.open{display:flex}.hdr-cta{display:none}}
 .hero{padding:56px 0 88px}
 .checks{display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--body);font-weight:500}
 .form{background:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px rgba(15,92,92,.08)}
@@ -85,7 +85,7 @@ details p{margin-top:12px;color:var(--muted)}
 .visual{background:var(--teal);border-radius:24px;padding:36px;color:#fff;display:flex;flex-direction:column;gap:18px}
 .visual .bar{height:12px;border-radius:999px;background:rgba(255,255,255,.15);overflow:hidden}
 .visual .bar i{display:block;height:100%;background:var(--saffron);border-radius:999px}
-.white .card{background:var(--sand)}
+.white .card{background:#fff}
 @media(max-width:620px){.wa span{display:none}.wa{padding:14px}}
 .brand{display:inline-flex;align-items:center;gap:10px}
 .proof{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;color:var(--body);font-size:15px}
@@ -111,3 +111,13 @@ details p{margin-top:12px;color:var(--muted)}
 .js .clients-grid.open > .client{display:flex}
 .tools .more-chip{background:var(--teal);color:#fff;border-color:var(--teal);font-weight:700}
 .form-error{background:#FEF2F2;color:#991B1B;border-radius:10px;padding:10px 12px;font-size:14px;margin:4px 0}
+
+/* white + off-white theme */
+.white{background:var(--sand)}
+.card{border:1px solid var(--sand-d);box-shadow:0 1px 2px rgba(20,32,30,.04)}
+.card.sand{background:var(--sand);border-color:transparent;box-shadow:none}
+.white .card.sand{background:#fff;border-color:var(--sand-d)}
+.form{border:1px solid var(--sand-d)}
+.tools span{background:#fff}
+.white .tools span,.white .badge{background:#fff}
+.badge{border:1px solid var(--sand-d)}
