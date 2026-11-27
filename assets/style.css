@@ -102,8 +102,10 @@ details p{margin-top:12px;color:var(--muted)}
 .work img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;background:var(--sand-d)}
 .copy a{color:#D6D3D1;text-decoration:underline}
 .client h3 a{color:var(--teal)}.client h3 a:hover{text-decoration:underline}
-.client .metric{font-family:'Outfit',sans-serif;font-size:30px;color:var(--ink);line-height:1.1}
+.client .metric{font-family:'Outfit',sans-serif;font-size:27px;white-space:nowrap;color:var(--ink);line-height:1.1}
 .client-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .client-top .chip{align-self:flex-start}
 .spark{display:block;flex-shrink:0}
 .result .spark{margin-bottom:6px}
+.js .clients-grid > .client:nth-child(n+7){display:none}
+.js .clients-grid.open > .client{display:flex}

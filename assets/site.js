@@ -15,3 +15,14 @@
     });
   });
 })();
+(function () {
+  document.documentElement.classList.add('js');
+  var b = document.getElementById('more-clients'), g = document.getElementById('clients');
+  if (!b || !g) return;
+  if (g.children.length <= 6) { b.style.display = 'none'; return; }
+  b.addEventListener('click', function () {
+    var open = g.classList.toggle('open');
+    b.setAttribute('aria-expanded', open ? 'true' : 'false');
+    b.textContent = open ? 'Show fewer' : 'View more results';
+  });
+})();
