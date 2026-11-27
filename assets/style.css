@@ -101,3 +101,5 @@ details p{margin-top:12px;color:var(--muted)}
 .person .role{font-weight:700;color:var(--amber);font-size:14px}
 .work img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:12px;background:var(--sand-d)}
 .copy a{color:#D6D3D1;text-decoration:underline}
+.client h3 a{color:var(--teal)}.client h3 a:hover{text-decoration:underline}
+.client .metric{font-family:'Outfit',sans-serif;font-size:30px;color:var(--ink);line-height:1.1}
