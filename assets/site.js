@@ -3,7 +3,13 @@
   if (t && n) t.addEventListener('click', function () {
     var open = n.classList.toggle('open');
     t.setAttribute('aria-expanded', open ? 'true' : 'false');
+    t.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.body.classList.toggle('nav-open', open);
   });
+  if (t && n) {
+    n.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { if (n.classList.contains('open')) t.click(); }); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && n.classList.contains('open')) t.click(); });
+  }
   var btns = document.querySelectorAll('[data-filter]');
   btns.forEach(function (b) {
     b.addEventListener('click', function () {

@@ -43,7 +43,7 @@ a.card{color:var(--ink);transition:transform .15s,box-shadow .15s}a.card:hover{t
 .nav{display:flex;gap:26px;font-weight:500;font-size:15px;align-items:center}
 .nav a{color:var(--body)}.nav a[aria-current=page]{color:var(--teal);font-weight:700}
 .nav-toggle{display:none;background:none;border:2px solid var(--teal);border-radius:10px;padding:8px 12px;color:var(--teal);font-weight:700;font-family:inherit}
-@media(max-width:900px){.nav-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 24px 24px;border-bottom:1px solid var(--sand-d)}.nav.open{display:flex}.hdr-cta{display:none}}
+@media(max-width:1100px){.nav-toggle{display:block}.nav{display:none;position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;align-items:flex-start;padding:16px 24px 24px;border-bottom:1px solid var(--sand-d)}.nav.open{display:flex}.hdr-cta{display:none}}
 .hero{padding:56px 0 88px}
 .checks{display:flex;flex-wrap:wrap;gap:10px 28px;color:var(--body);font-weight:500}
 .form{background:#fff;border-radius:22px;padding:32px;display:flex;flex-direction:column;gap:10px;box-shadow:0 10px 30px rgba(26,26,38,.08)}
@@ -223,3 +223,23 @@ h1,h2{color:var(--ink)}
   .site-footer ul{align-items:center}
   .site-footer .brand{justify-content:center}
 }
+/* Burger menu */
+.nav-toggle{width:46px;height:46px;padding:0;border:1px solid var(--sand-d);border-radius:12px;background:#fff;align-items:center;justify-content:center;cursor:pointer}
+.burger{position:relative;display:block;width:22px;height:16px}
+.burger i{position:absolute;left:0;width:100%;height:2px;border-radius:2px;background:var(--ink);transition:transform .25s ease,opacity .2s ease,top .25s ease}
+.burger i:nth-child(1){top:0}.burger i:nth-child(2){top:7px}.burger i:nth-child(3){top:14px}
+.nav-toggle[aria-expanded=true] .burger i:nth-child(1){top:7px;transform:rotate(45deg)}
+.nav-toggle[aria-expanded=true] .burger i:nth-child(2){opacity:0}
+.nav-toggle[aria-expanded=true] .burger i:nth-child(3){top:7px;transform:rotate(-45deg)}
+@media(max-width:1100px){
+  .nav-toggle{display:inline-flex}
+  .nav{gap:0;padding:8px 24px 20px;box-shadow:0 16px 30px rgba(26,26,38,.08)}
+  .nav a{display:block;width:100%;padding:14px 0;border-bottom:1px solid var(--sand-d);font-size:14px}
+  .nav a:last-child{border-bottom:0}
+}
+/* Responsive fixes */
+@media (max-width:420px){.client .metric{white-space:normal;font-size:26px;line-height:1.15}.wrap{padding:0 18px}}
+@media (min-width:1101px){.nav a{padding:10px 0;display:inline-block}}
+.nav-toggle{border:1px solid var(--line)!important}
+@media (max-width:760px){.topbar .wrap{justify-content:center;text-align:center}.tb-loc{display:none}.topbar{font-size:13px}}
+@media (max-width:380px){.tb-sep,.tb-mail{display:none}.brand{font-size:19px;gap:8px}.brand svg{width:32px;height:32px}}
